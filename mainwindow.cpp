@@ -65,6 +65,7 @@ MainWindow::~MainWindow()
     delete add_book;
 }
 
+
 void MainWindow::onpushButton_clicked()
 {
     qDebug()<<"omad mosht\n";
@@ -84,7 +85,7 @@ void MainWindow::onpushButton_clicked()
 //        delete add_book;
 //        add_book = nullptr;
 //    }
-//////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////
     client=new Ui::client;
     //
     client->setupUi(this);
@@ -94,6 +95,8 @@ void MainWindow::onpushButton_clicked()
     client->search->hide();
     client->bookname->hide();
     client->label->hide();
+    client->listobooks->hide();
+    client->listofbooklabel->hide();
   //  show();
     mosht=new moshtari;
     //
@@ -141,31 +144,76 @@ booklistname->Add(add_book->name->text(),add_book->writer->text(),add_book->year
 }
 void MainWindow::onsearch_clicked()
 {
-Booknode book1=booklistname->searchbook(client->bookname->text());
-if(book1.name!=NULL)
-{
-    Booknode *bookfind = new Booknode(client->listwidgetofBooks);
-      qDebug()<<".........found\n";
-      mosht->sabad.push_back(book1);
-      qDebug()<<".........found\n";
-    client->listwidgetofBooks->addItem(bookfind);
-    bookfind->setText("Name :"+book1.name+" Year : "+book1.year);
-    client->bookname->clear();
+    if(client->bookname->text()!="")
+    {
+        Booknode book1=booklistname->searchbook(client->bookname->text());
+        if(book1.name!=NULL)
+        {
+            Booknode *bookfind = new Booknode(client->listwidgetofBooks);
+              qDebug()<<".........found\n";
+              mosht->sabad.push_back(book1);
+              qDebug()<<".........found\n";
+            client->listwidgetofBooks->addItem(bookfind);
+            bookfind->setText("Name :"+book1.name+" Year : "+book1.year);
+            client->bookname->clear();
 
-    return;
-}
-else
-{
-    QMessageBox message;
-    message.setText("We don't have this book!!!");
-    message.exec();
+            return;
+        }
+        else
+        {
+            QMessageBox message;
+            message.setText("We don't have this book!!!");
+            message.exec();
 
-    if(message.close())
-    client->bookname->clear();
-    qDebug()<<"......... not found\n";
+            if(message.close())
+            client->bookname->clear();
+            qDebug()<<"......... not found\n";
 
-    return ;
-}
+            return ;
+        }
+    }
+    else
+    {
+        Booknode book1;
+        QString nameoftext;
+        QString textofitem=client->listobooks->currentItem()->text();
+        qDebug()<<"text..."<<textofitem<<endl;
+        int i;
+        for(i=7;textofitem[i]!=' ';i++)
+        {
+            nameoftext.push_back(textofitem[i]);
+        }
+        qDebug()<<"text.111.."<<textofitem<<endl;
+
+        book1.name=nameoftext;
+        book1=booklistname->searchbook(book1.name);
+
+//        for(i=i+8;textofitem[i]!=' ';i++)
+//        {
+//            yearoftext.push_back(textofitem[i]);
+//        }
+//        qDebug()<<"text..2222."<<textofitem<<endl;
+
+//        book1.year=yearoftext;
+
+//        for(i=i+8;textofitem[i]!='\0';i++)
+//        {
+//            costoftext.push_back(textofitem[i]);
+//        }
+//        qDebug()<<"text.333.."<<textofitem<<endl;
+
+//        book1.cost=costoftext.toInt();
+
+        Booknode *bookfind = new Booknode(client->listwidgetofBooks);
+          qDebug()<<".........found\n";
+          mosht->sabad.push_back(book1);
+          qDebug()<<".........found\n";
+        client->listwidgetofBooks->addItem(bookfind);
+        bookfind->setText("Name :"+book1.name+" Year : "+book1.year);
+        client->bookname->clear();
+        return;
+    }
+
 }
 
 void MainWindow::onbuy_clicked()
@@ -254,47 +302,54 @@ void MainWindow::onok_clicked()
     client->namelabel->hide();
     client->jens->hide();
     client->clientname->hide();
+    client->listobooks->show();
+    client->listofbooklabel->show();
+    //
+    Booknode *book=new Booknode;
+    if(booklistname->first!=NULL)
+    {
+        book=booklistname->first;
+        client->listobooks->addItem("Name : "+book->name+" Year : "+book->year+" Cost : "+QString::number(book->cost));
+        book=booklistname->first->next;
+        for(;book!=booklistname->first;book=book->next)
+        {
+            client->listobooks->addItem("Name : "+book->name+" Year : "+book->year+" Cost : "+QString::number(book->cost));
+        }
+    }
 
+    //
+    connect(client->listobooks,&QListWidget::itemClicked,this,&MainWindow::addtolistbooks);
+   //
+
+}
+void MainWindow::addtolistbooks(QListWidgetItem* item)
+{
+    onsearch_clicked();
+   // client->listobooks->removeItemWidget(item);
+    delete item;
 }
 
 void MainWindow::onfactor_clicked()
 {
-    qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
-    factorofclient=new Ui::factor;
-    factorofclient->setupUi(this);
-    show();
-    qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
-    connect(factorofclient->back_factor,&QPushButton::clicked,this,&MainWindow::onback_factor_clicked);
-    qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
-//    if(manqueue.rear==NULL)
-//        qDebug()<<"hereeeeeeiffifififi\n"<<womanqueue.rear->clientinsaf->name;
-    if(manorwoman==true && manqueue.rear!=NULL)
-    {
-    manorwoman=false;
-    moshtari gone=manqueue.popfromsaf();
-    long int totalcost=0;
-
-    factorofclient->clientnamefinal->setText(gone.name);
-    Booknode recievebook = gone.sabad.popback();
-    while(recievebook.name!=NULL)
-    {
-        totalcost+=recievebook.cost;
-       factorofclient->listofbooksfinal->addItem("BookName : "+recievebook.name+" Cost : "+QString::number(recievebook.cost));
-       recievebook = gone.sabad.popback();
-    }
-    factorofclient->totalc->setText(QString::number(totalcost));
-    }
-    else if((manorwoman==true && manqueue.rear==NULL) || (manorwoman==false && womanqueue.rear!=NULL))
+    if(womanqueue.front!=NULL || manqueue.front!=NULL)
     {
         qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
-        manorwoman=true;
-        moshtari gone=womanqueue.popfromsaf();
-
-       qDebug()<<"sabad\n"<<gone.name;
+        factorofclient=new Ui::factor;
+        factorofclient->setupUi(this);
+        show();
+        qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
+        connect(factorofclient->back_factor,&QPushButton::clicked,this,&MainWindow::onback_factor_clicked);
+        qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
+    //    if(manqueue.rear==NULL)
+    //        qDebug()<<"hereeeeeeiffifififi\n"<<womanqueue.rear->clientinsaf->name;
+        if(manorwoman==true && manqueue.rear!=NULL)
+        {
+        manorwoman=false;
+        moshtari gone=manqueue.popfromsaf();
         long int totalcost=0;
+
         factorofclient->clientnamefinal->setText(gone.name);
         Booknode recievebook = gone.sabad.popback();
-
         while(recievebook.name!=NULL)
         {
             totalcost+=recievebook.cost;
@@ -302,8 +357,34 @@ void MainWindow::onfactor_clicked()
            recievebook = gone.sabad.popback();
         }
         factorofclient->totalc->setText(QString::number(totalcost));
-    }
+        }
+        else if((manorwoman==true && manqueue.rear==NULL) || (manorwoman==false && womanqueue.rear!=NULL))
+        {
+            qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
+            manorwoman=true;
+            moshtari gone=womanqueue.popfromsaf();
 
+           qDebug()<<"sabad\n"<<gone.name;
+            long int totalcost=0;
+            factorofclient->clientnamefinal->setText(gone.name);
+            Booknode recievebook = gone.sabad.popback();
+
+            while(recievebook.name!=NULL)
+            {
+                totalcost+=recievebook.cost;
+               factorofclient->listofbooksfinal->addItem("BookName : "+recievebook.name+" Cost : "+QString::number(recievebook.cost));
+               recievebook = gone.sabad.popback();
+            }
+            factorofclient->totalc->setText(QString::number(totalcost));
+        }
+
+    }
+    else
+    {
+        QMessageBox mes;
+        mes.setText("NO Client is in Queue....");
+        mes.exec();
+    }
 }
 
 void MainWindow::onback_client_clicked()

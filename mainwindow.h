@@ -36,6 +36,8 @@ class MainWindow : public QMainWindow
 
 
     private slots:
+    void addtolistbooks(QListWidgetItem*);
+
     void onpushButton_clicked();
 
     void onaddbook_clicked();
