@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\booklist.o
+./debug\moshtari.o
+./debug\stack.o
+./debug\saf.o
+./debug\factor.o
+./debug\client.o
+./debug\addbook.o
+./debug\moc_mainwindow.o
+);

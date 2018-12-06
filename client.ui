@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>client</class>
+ <widget class="QMainWindow" name="client">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1126</width>
+    <height>745</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(72, 126, 131);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="buy">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>320</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Confirm To Buy</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listwidgetofBooks">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>200</y>
+      <width>321</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Print</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(255, 255, 0);
+color: rgb(255, 255, 0);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>60</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 80);
+font: 75 16pt &quot;Agency FB&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>Enter Book Name :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="bookname">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>60</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 255);
+background-color: rgb(255, 255, 255);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="search">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>220</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 75 12pt &quot;Agency FB&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="man">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>240</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 80);
+</string>
+    </property>
+    <property name="text">
+     <string>man</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="woman">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>310</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 80);
+</string>
+    </property>
+    <property name="text">
+     <string>woman</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ok">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>410</y>
+      <width>141</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Serif</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Confirm</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="chosel">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>150</y>
+      <width>311</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 80);
+</string>
+    </property>
+    <property name="text">
+     <string>Chosen Books</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="jens">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>260</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>man or woman:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="namelabel">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>150</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Your Name :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="clientname">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>150</y>
+      <width>113</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 127);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="back_client">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>0</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 12pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 0);
+</string>
+    </property>
+    <property name="text">
+     <string>back</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1126</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

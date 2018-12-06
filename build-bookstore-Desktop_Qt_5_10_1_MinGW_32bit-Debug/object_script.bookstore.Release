@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\booklist.o
+./release\moshtari.o
+./release\stack.o
+./release\saf.o
+./release\factor.o
+./release\client.o
+./release\addbook.o
+./release\moc_mainwindow.o
+);
