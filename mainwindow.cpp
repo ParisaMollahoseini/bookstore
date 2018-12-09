@@ -57,14 +57,15 @@ MainWindow::~MainWindow()
 
         }
         file.close();
-    }
+
 
     delete booklistname;
+    }
     delete ui;
     delete client;
     delete add_book;
-}
 
+}
 
 void MainWindow::onpushButton_clicked()
 {
@@ -333,15 +334,10 @@ void MainWindow::onfactor_clicked()
 {
     if(womanqueue.front!=NULL || manqueue.front!=NULL)
     {
-        qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
         factorofclient=new Ui::factor;
         factorofclient->setupUi(this);
         show();
-        qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
         connect(factorofclient->back_factor,&QPushButton::clicked,this,&MainWindow::onback_factor_clicked);
-        qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
-    //    if(manqueue.rear==NULL)
-    //        qDebug()<<"hereeeeeeiffifififi\n"<<womanqueue.rear->clientinsaf->name;
         if(manorwoman==true && manqueue.rear!=NULL)
         {
         manorwoman=false;
