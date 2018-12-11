@@ -12,6 +12,7 @@
 #include"ui_factor.h"
 #include<QListWidget>
 #include"saf.h"
+
 namespace Ui {
 class MainWindow;
 class client;
@@ -26,6 +27,7 @@ class MainWindow : public QMainWindow
     public:
     saf womanqueue,manqueue;
     static int man,woman;
+    int choose_book=0;
     static bool manorwoman;
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();

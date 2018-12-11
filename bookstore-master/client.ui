@@ -14,28 +14,33 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(72, 126, 131);</string>
+   <string notr="true">background-color: rgb(72, 126, 131);
+border-image: url(:/20181210_223001.jpg);
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="buy">
     <property name="geometry">
      <rect>
-      <x>900</x>
-      <y>230</y>
-      <width>121</width>
+      <x>890</x>
+      <y>330</y>
+      <width>181</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Agency FB</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <pointsize>18</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-image: url(:/20181210_210744.jpg);
+font: 18pt &quot;Agency FB&quot;;</string>
     </property>
     <property name="text">
      <string>Confirm To Buy</string>
@@ -57,8 +62,9 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-color: rgb(255, 255, 0);
-color: rgb(255, 255, 0);</string>
+     <string notr="true">color: rgb(0, 0, 255);
+border-image: url();
+background-color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -66,22 +72,22 @@ color: rgb(255, 255, 0);</string>
      <rect>
       <x>300</x>
       <y>60</y>
-      <width>181</width>
+      <width>201</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Agency FB</family>
-      <pointsize>16</pointsize>
-      <weight>9</weight>
+      <pointsize>22</pointsize>
+      <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 80);
-font: 75 16pt &quot;Agency FB&quot;;
+font: 22pt &quot;Agency FB&quot;;
 </string>
     </property>
     <property name="text">
@@ -94,7 +100,7 @@ font: 75 16pt &quot;Agency FB&quot;;
       <x>530</x>
       <y>60</y>
       <width>201</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -104,8 +110,8 @@ font: 75 16pt &quot;Agency FB&quot;;
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 255);
-background-color: rgb(255, 255, 255);
-</string>
+border-image: url();
+background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string/>
@@ -114,16 +120,16 @@ background-color: rgb(255, 255, 255);
    <widget class="QPushButton" name="search">
     <property name="geometry">
      <rect>
-      <x>900</x>
-      <y>170</y>
+      <x>920</x>
+      <y>270</y>
       <width>111</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);
-font: 75 12pt &quot;Agency FB&quot;;
-</string>
+border-image: url(:/20181210_210744.jpg);
+font: 18pt &quot;Agency FB&quot;;</string>
     </property>
     <property name="text">
      <string>Search</string>
@@ -140,12 +146,16 @@ font: 75 12pt &quot;Agency FB&quot;;
     </property>
     <property name="font">
      <font>
-      <pointsize>11</pointsize>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 80);
-</string>
+font: 16pt &quot;Agency FB&quot;;</string>
     </property>
     <property name="text">
      <string>man</string>
@@ -162,11 +172,16 @@ font: 75 12pt &quot;Agency FB&quot;;
     </property>
     <property name="font">
      <font>
-      <pointsize>11</pointsize>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 80);
+font: 16pt &quot;Agency FB&quot;;
 </string>
     </property>
     <property name="text">
@@ -184,14 +199,18 @@ font: 75 12pt &quot;Agency FB&quot;;
     </property>
     <property name="font">
      <font>
-      <family>MS Serif</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Agency FB</family>
+      <pointsize>18</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-image: url(:/20181210_210744.jpg);
+color: rgb(0, 0, 127);
+font: 18pt &quot;Agency FB&quot;;</string>
     </property>
     <property name="text">
      <string>Confirm</string>
@@ -209,11 +228,15 @@ font: 75 12pt &quot;Agency FB&quot;;
     <property name="font">
      <font>
       <family>Agency FB</family>
-      <pointsize>14</pointsize>
+      <pointsize>22</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 80);
+font: 22pt &quot;Agency FB&quot;;
 </string>
     </property>
     <property name="text">
@@ -226,20 +249,24 @@ font: 75 12pt &quot;Agency FB&quot;;
    <widget class="QLabel" name="jens">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>260</y>
-      <width>101</width>
+      <x>60</x>
+      <y>280</y>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Agency FB</family>
-      <pointsize>12</pointsize>
+      <pointsize>18</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 0);</string>
+     <string notr="true">color: rgb(0, 0, 127);
+font: 18pt &quot;Agency FB&quot;;</string>
     </property>
     <property name="text">
      <string>man or woman:</string>
@@ -248,20 +275,24 @@ font: 75 12pt &quot;Agency FB&quot;;
    <widget class="QLabel" name="namelabel">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>150</y>
-      <width>101</width>
-      <height>31</height>
+      <x>90</x>
+      <y>140</y>
+      <width>161</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Agency FB</family>
-      <pointsize>14</pointsize>
+      <pointsize>22</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 0);</string>
+     <string notr="true">font: 22pt &quot;Agency FB&quot;;
+color: rgb(0, 0, 127);</string>
     </property>
     <property name="text">
      <string>Your Name :</string>
@@ -270,14 +301,15 @@ font: 75 12pt &quot;Agency FB&quot;;
    <widget class="QLineEdit" name="clientname">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>150</y>
-      <width>113</width>
-      <height>31</height>
+      <x>280</x>
+      <y>140</y>
+      <width>141</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
+     <string notr="true">border-image: url();
+background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 127);</string>
     </property>
    </widget>
@@ -292,18 +324,19 @@ color: rgb(0, 0, 127);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 75 12pt &quot;Agency FB&quot;;
-color: rgb(255, 255, 0);
-</string>
+border-image: url(:/20181210_210744.jpg);
+font: 22pt &quot;Agency FB&quot;;
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>back</string>
+     <string>Back</string>
     </property>
    </widget>
    <widget class="QListWidget" name="listobooks">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>200</y>
+      <x>90</x>
+      <y>190</y>
       <width>311</width>
       <height>301</height>
      </rect>
@@ -315,32 +348,60 @@ color: rgb(255, 255, 0);
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 255, 255);</string>
+     <string notr="true">color: rgb(0, 0, 255);
+border-image: url();
+background-color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QLabel" name="listofbooklabel">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>150</y>
+      <x>160</x>
+      <y>140</y>
       <width>151</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Segoe Print</family>
-      <pointsize>16</pointsize>
+      <family>Agency FB</family>
+      <pointsize>22</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 127);</string>
+     <string notr="true">font: 22pt &quot;Agency FB&quot;;
+color: rgb(0, 0, 127);</string>
     </property>
     <property name="text">
      <string>Books</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>510</y>
+      <width>261</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>

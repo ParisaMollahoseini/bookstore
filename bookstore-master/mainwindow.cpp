@@ -7,8 +7,6 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),client(nullptr),add_book(nullptr)
 {
-//    womanqueue=new saf;
-//    manqueue=new saf;
 
     ui->setupUi(this);
     show();
@@ -57,15 +55,15 @@ MainWindow::~MainWindow()
 
         }
         file.close();
-
-
-    delete booklistname;
+        delete booklistname;
+        delete ui;
+        delete client;
+        delete add_book;
     }
-    delete ui;
-    delete client;
-    delete add_book;
+
 
 }
+
 
 void MainWindow::onpushButton_clicked()
 {
@@ -91,6 +89,7 @@ void MainWindow::onpushButton_clicked()
     //
     client->setupUi(this);
     client->buy->hide();
+    client->label_2->hide();
     client->chosel->hide();
     client->listwidgetofBooks->hide();
     client->search->hide();
@@ -133,6 +132,7 @@ void MainWindow::onaddbook_clicked()
 //    }
     add_book=new Ui::addBook;
     add_book->setupUi(this);
+    add_book->label_5->setText("Current Books In Store:"+QString::number(booklistname->n));
     connect(add_book->esafe,&QPushButton::clicked,this,&MainWindow::onesafe_clicked);
     connect(add_book->back_addbook,&QPushButton::clicked,this,&MainWindow::onback_addbook_clicked);
     show();
@@ -141,6 +141,11 @@ void MainWindow::onesafe_clicked()
 {
 
 booklistname->Add(add_book->name->text(),add_book->writer->text(),add_book->year->text(),add_book->cost->text().toInt());
+add_book->label_5->setText("Current Books In Store:"+QString::number(booklistname->n));
+add_book->year->clear();
+add_book->writer->clear();
+add_book->cost->clear();
+add_book->name->clear();
 
 }
 void MainWindow::onsearch_clicked()
@@ -214,6 +219,8 @@ void MainWindow::onsearch_clicked()
         client->bookname->clear();
         return;
     }
+    booklistname->n=booklistname->n - choose_book;
+
 
 }
 
@@ -223,16 +230,19 @@ void MainWindow::onbuy_clicked()
     if(mosht->sabad.top==-1)
     {
         QMessageBox message;
-        message.setText("NO Book Is Chosen...."+QString::number(mosht->turn));
+        message.setText("NO Book Is Chosen....");
         message.exec();
         return ;
     }
     if(mosht->flag==true)
        {
         mosht->turn=man++;
+        //choose_book++;
        }
-     else
+    else{
     mosht->turn=woman++;
+    //choose_book++;
+    }
     if(mosht->flag==true)
     {
         manqueue.pushback(*mosht);
@@ -274,6 +284,8 @@ void MainWindow::onbuy_clicked()
 
        // connect()
     }
+    //booklistname->n=booklistname->n - choose_book;
+
 
 }
 
@@ -297,6 +309,7 @@ void MainWindow::onok_clicked()
     client->buy->show();
     client->chosel->show();
     client->listwidgetofBooks->show();
+    client->label_2->show();
     client->search->show();
     client->bookname->show();
     client->label->show();
@@ -306,6 +319,7 @@ void MainWindow::onok_clicked()
     client->listobooks->show();
     client->listofbooklabel->show();
     //
+    client->label_2->setText("NUmber of Current books is:"+QString::number(booklistname->n));
     Booknode *book=new Booknode;
     if(booklistname->first!=NULL)
     {
@@ -326,7 +340,7 @@ void MainWindow::onok_clicked()
 void MainWindow::addtolistbooks(QListWidgetItem* item)
 {
     onsearch_clicked();
-   // client->listobooks->removeItemWidget(item);
+    client->label_2->setText("NUmber of Current books is:"+QString::number(booklistname->n));
     delete item;
 }
 
@@ -334,10 +348,15 @@ void MainWindow::onfactor_clicked()
 {
     if(womanqueue.front!=NULL || manqueue.front!=NULL)
     {
+        //qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
         factorofclient=new Ui::factor;
         factorofclient->setupUi(this);
         show();
+        //qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
         connect(factorofclient->back_factor,&QPushButton::clicked,this,&MainWindow::onback_factor_clicked);
+        //qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
+    //    if(manqueue.rear==NULL)
+    //        qDebug()<<"hereeeeeeiffifififi\n"<<womanqueue.rear->clientinsaf->name;
         if(manorwoman==true && manqueue.rear!=NULL)
         {
         manorwoman=false;

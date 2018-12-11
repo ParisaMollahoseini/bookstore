@@ -15,8 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(46, 109, 116);
-
-
+border-image: url(:/imaqgaes.jfif);
 
 
 </string>
@@ -25,10 +24,10 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>240</y>
-      <width>161</width>
-      <height>61</height>
+      <x>880</x>
+      <y>160</y>
+      <width>201</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="palette">
@@ -206,14 +205,15 @@
     <property name="font">
      <font>
       <family>Agency FB</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <pointsize>17</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+border-image: url(:/20181210_204129.jpg);</string>
     </property>
     <property name="text">
      <string>costomer entrance</string>
@@ -222,10 +222,10 @@ color: rgb(0, 0, 0);</string>
    <widget class="QPushButton" name="addbook">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>130</y>
-      <width>161</width>
-      <height>71</height>
+      <x>950</x>
+      <y>60</y>
+      <width>201</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="palette">
@@ -243,9 +243,9 @@ color: rgb(0, 0, 0);</string>
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
-          <blue>255</blue>
+          <red>0</red>
+          <green>170</green>
+          <blue>127</blue>
          </color>
         </brush>
        </colorrole>
@@ -270,18 +270,18 @@ color: rgb(0, 0, 0);</string>
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
-          <blue>255</blue>
+          <red>0</red>
+          <green>170</green>
+          <blue>127</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Window">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
-          <blue>255</blue>
+          <red>0</red>
+          <green>170</green>
+          <blue>127</blue>
          </color>
         </brush>
        </colorrole>
@@ -299,9 +299,9 @@ color: rgb(0, 0, 0);</string>
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
-          <blue>255</blue>
+          <red>0</red>
+          <green>170</green>
+          <blue>127</blue>
          </color>
         </brush>
        </colorrole>
@@ -326,18 +326,18 @@ color: rgb(0, 0, 0);</string>
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
-          <blue>255</blue>
+          <red>0</red>
+          <green>170</green>
+          <blue>127</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Window">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
-          <blue>255</blue>
+          <red>0</red>
+          <green>170</green>
+          <blue>127</blue>
          </color>
         </brush>
        </colorrole>
@@ -355,9 +355,9 @@ color: rgb(0, 0, 0);</string>
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
-          <blue>255</blue>
+          <red>0</red>
+          <green>170</green>
+          <blue>127</blue>
          </color>
         </brush>
        </colorrole>
@@ -382,18 +382,18 @@ color: rgb(0, 0, 0);</string>
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
-          <blue>255</blue>
+          <red>0</red>
+          <green>170</green>
+          <blue>127</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Window">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
-          <blue>255</blue>
+          <red>0</red>
+          <green>170</green>
+          <blue>127</blue>
          </color>
         </brush>
        </colorrole>
@@ -403,15 +403,18 @@ color: rgb(0, 0, 0);</string>
     <property name="font">
      <font>
       <family>Agency FB</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <pointsize>16</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
+     <string notr="true">background-color: rgb(255, 255, 0);
+background-color: rgb(0, 170, 127);
 color: rgb(0, 0, 0);
-
+font: 75 16pt &quot;Agency FB&quot;;
+border-image: url(:/20181210_204129.jpg);
 </string>
     </property>
     <property name="text">
@@ -421,10 +424,10 @@ color: rgb(0, 0, 0);
    <widget class="QPushButton" name="factor">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>340</y>
-      <width>181</width>
-      <height>61</height>
+      <x>770</x>
+      <y>260</y>
+      <width>221</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="palette">
@@ -602,18 +605,41 @@ color: rgb(0, 0, 0);
     <property name="font">
      <font>
       <family>Agency FB</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(0, 0, 0);
 background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+border-image: url(:/20181210_204200.jpg);</string>
     </property>
     <property name="text">
      <string>See Factor of sell</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>60</y>
+      <width>461</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/20181210_204059.jpg);</string>
+    </property>
+    <property name="text">
+     <string>Welcome To Our BookStore :)</string>
     </property>
    </widget>
   </widget>

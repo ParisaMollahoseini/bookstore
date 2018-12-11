@@ -1,11 +1,13 @@
 #ifndef BOOKLIST_H
 #define BOOKLIST_H
-#include    <QFile>
+#include <QFile>
 #include<QTextStream>
 #include<iostream>
 #include<QListWidgetItem>
 #include<QListWidget>
 #include<QString>
+//#include<qmainwindow.h>
+
 using namespace std;
 class Booknode:public QListWidgetItem
 {
@@ -21,6 +23,8 @@ public:
 class booklist
 {
 public:
+
+    int n;
     ~booklist();
     booklist();
     void Add(QString name1,QString writer1,QString year1,int cost1);

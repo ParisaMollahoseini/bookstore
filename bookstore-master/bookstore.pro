@@ -44,4 +44,7 @@ FORMS += \
     addbook.ui \
     factor.ui
 
-RESOURCES +=
+RESOURCES += \
+    main1.qrc
+
+DISTFILES +=

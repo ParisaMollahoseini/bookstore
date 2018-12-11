@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>imaqgaes.jfif</file>
+        <file>20181210_204059.jpg</file>
+        <file>20181210_204129.jpg</file>
+        <file>20181210_204200.jpg</file>
+        <file>imagcces.jfif</file>
+        <file>20181210_210744.jpg</file>
+        <file>20181210_210836.jpg</file>
+        <file>20181210_211055.jpg</file>
+        <file>20181210_211126.jpg</file>
+        <file>20181210_211201.jpg</file>
+        <file>20181210_215432.jpg</file>
+        <file>20181210_215458.jpg</file>
+        <file>20181210_223001.jpg</file>
+        <file>jadid.png</file>
+        <file>Picture1.png</file>
+    </qresource>
+</RCC>
