@@ -346,7 +346,7 @@ void MainWindow::addtolistbooks(QListWidgetItem* item)
 
 void MainWindow::onfactor_clicked()
 {
-    if(womanqueue.front!=NULL || manqueue.front!=NULL)
+    if(womanqueue.rear!=womanqueue.front || manqueue.rear!=manqueue.front)
     {
         //qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
         factorofclient=new Ui::factor;
@@ -357,7 +357,7 @@ void MainWindow::onfactor_clicked()
         //qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
     //    if(manqueue.rear==NULL)
     //        qDebug()<<"hereeeeeeiffifififi\n"<<womanqueue.rear->clientinsaf->name;
-        if(manorwoman==true && manqueue.rear!=NULL)
+        if(manorwoman==true && manqueue.rear!=manqueue.front)
         {
         manorwoman=false;
         moshtari gone=manqueue.popfromsaf();
@@ -373,7 +373,7 @@ void MainWindow::onfactor_clicked()
         }
         factorofclient->totalc->setText(QString::number(totalcost));
         }
-        else if((manorwoman==true && manqueue.rear==NULL) || (manorwoman==false && womanqueue.rear!=NULL))
+        else if((manorwoman==true && manqueue.rear==manqueue.front) || (manorwoman==false && womanqueue.rear!=womanqueue.front))
         {
             qDebug()<<"hereeeeee|||\n"<<womanqueue.rear->clientinsaf->name;
             manorwoman=true;

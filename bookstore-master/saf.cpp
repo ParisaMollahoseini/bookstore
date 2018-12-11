@@ -15,17 +15,19 @@ if(rear==NULL)
     rear->clientinsaf->flag=mosht.flag;
     rear->clientinsaf->name=mosht.name;
     rear->clientinsaf->sabad=mosht.sabad;
-
     rear->clientinsaf->turn=mosht.turn;
     rear->next=NULL;
+
     front=new safnode;
-    front->clientinsaf=new moshtari;
-    front->clientinsaf->flag=mosht.flag;
-    front->clientinsaf->name=mosht.name;
-    front->clientinsaf->sabad=mosht.sabad;
-    //qDebug()<<"front..."<<front->clientinsaf->sabad.popback().name;
-    front->clientinsaf->turn=mosht.turn;
-    front->next=NULL;
+    front->next=rear;
+    //front->clientinsaf=NULL;
+//    front->clientinsaf=new moshtari;
+//    front->clientinsaf->flag=mosht.flag;
+//    front->clientinsaf->name=mosht.name;
+//    front->clientinsaf->sabad=mosht.sabad;
+//    //qDebug()<<"front..."<<front->clientinsaf->sabad.popback().name;
+//    front->clientinsaf->turn=mosht.turn;
+//    front->next=NULL;
 }
 else
 {
@@ -45,7 +47,7 @@ else
 moshtari saf::popfromsaf()
 {
     moshtari m;
-    if(front==NULL)
+    if(front==rear)
     {
         m.name="";
         return m;
@@ -54,10 +56,10 @@ moshtari saf::popfromsaf()
     {
     safnode *frontdelete=new safnode;
     frontdelete->clientinsaf=new moshtari;
-    frontdelete->clientinsaf->flag=front->clientinsaf->flag;
-    frontdelete->clientinsaf->name=front->clientinsaf->name;
-    frontdelete->clientinsaf->sabad=front->clientinsaf->sabad;
-    frontdelete->clientinsaf->turn=front->clientinsaf->turn;
+    frontdelete->clientinsaf->flag=front->next->clientinsaf->flag;
+    frontdelete->clientinsaf->name=front->next->clientinsaf->name;
+    frontdelete->clientinsaf->sabad=front->next->clientinsaf->sabad;
+    frontdelete->clientinsaf->turn=front->next->clientinsaf->turn;
 
     front=front->next;
     frontdelete->next=NULL;
